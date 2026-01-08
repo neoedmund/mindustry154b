@@ -3,7 +3,7 @@
 The automation tower defense RTS, written in Java.
 
 
-*This is a clone just from v154*
+*This is a clone just from [Mindustry](https://github.com/Anuken/Mindustry) v154*
 
 ## Changes
 
