@@ -16,7 +16,7 @@ import mindustry.game.EventType.*;
 import mindustry.net.Administration.*;
 import mindustry.net.Net.*;
 import mindustry.net.Packets.*;
-import net.jpountz.lz4.*;
+//import net.jpountz.lz4.*;
 
 import java.io.*;
 import java.net.*;
@@ -34,8 +34,8 @@ public class ArcNetProvider implements NetProvider{
     final CopyOnWriteArrayList<ArcConnection> connections = new CopyOnWriteArrayList<>();
     Thread serverThread;
 
-    private static final LZ4FastDecompressor decompressor = LZ4Factory.fastestInstance().fastDecompressor();
-    private static final LZ4Compressor compressor = LZ4Factory.fastestInstance().fastCompressor();
+//    private static final LZ4FastDecompressor decompressor = LZ4Factory.fastestInstance().fastDecompressor();
+//    private static final LZ4Compressor compressor = LZ4Factory.fastestInstance().fastCompressor();
 
     private volatile int playerLimitCache, packetSpamLimit;
 
@@ -439,7 +439,8 @@ public class ArcNetProvider implements NetProvider{
                     byteBuffer.position(byteBuffer.position() + buffer.position());
                 }else{
                     //decompress otherwise
-                    int read = decompressor.decompress(byteBuffer, byteBuffer.position(), buffer, 0, length);
+                    int read = 0;// decompressor.decompress(byteBuffer, byteBuffer.position(), buffer, 0, length);
+                    if (true) throw new RuntimeException("LZ4 not included");
 
                     buffer.position(0);
                     buffer.limit(length);
@@ -487,7 +488,8 @@ public class ArcNetProvider implements NetProvider{
                 }else{
                     byteBuffer.put((byte)1); //1 = compression
                     //write compressed data; this does not modify position!
-                    int written = compressor.compress(temp, 0, temp.position(), byteBuffer, byteBuffer.position(), byteBuffer.remaining());
+                    int written = 0; // compressor.compress(temp, 0, temp.position(), byteBuffer, byteBuffer.position(), byteBuffer.remaining());
+                    if (true) throw new RuntimeException("LZ4 not included");
                     //skip to indicate the written, compressed data
                     byteBuffer.position(byteBuffer.position() + written);
                 }

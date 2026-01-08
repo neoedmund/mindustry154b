@@ -2,16 +2,17 @@
 	prjs : [
 		// [ mindustry154b . { dep : [ ] cp : [ ] } ]
 		[ md_desktop desktop { // main : mindustry.desktop.DesktopLauncher
-				dep : [ md_core ]
+				dep : [ md_core md_core_asset ]
 				cp : [ /home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc ]
 			} ]
-		[ md_core core { srcDir : [ assets src core-generated-kapt/main ]
+		[ md_core_asset core { srcDir : [ assets ] } ]
+		[ md_core core { srcDir : [ src core-generated-kapt/main ]
 				dep : [ ]
 				cp : [
 					/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc // for Arc binary got after gradlew on Arc
 					/home/neoe/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet
 					/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken/rhino
-					/home/neoe/.gradle/caches/modules-2/files-2.1/org.lz4
+					// disabled: /home/neoe/.gradle/caches/modules-2/files-2.1/org.lz4
 					core/annotations-release.jar
 				] } ]
 
