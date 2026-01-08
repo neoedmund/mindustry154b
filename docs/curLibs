@@ -1,0 +1,26 @@
+
+add /opt/github/neoedmund/mindustry154b/dist/annotations-release.jar	171,912 bytes	2026/01/08 Thu 15:52:54
+add /opt/github/neoedmund/mindustry154b/dist/arc-core-46c0956944.jar	1,239,006 bytes	2026/01/08 Thu 13:13:24
+add /opt/github/neoedmund/mindustry154b/dist/arc.jar	340 bytes	2026/01/08 Thu 14:54:39
+add /opt/github/neoedmund/mindustry154b/dist/arcnet-46c0956944.jar	51,135 bytes	2026/01/08 Thu 13:13:41
+add /opt/github/neoedmund/mindustry154b/dist/backend-headless-46c0956944.jar	4,079 bytes	2026/01/08 Thu 13:14:14
+add /opt/github/neoedmund/mindustry154b/dist/backend-sdl-46c0956944.jar	3,812,401 bytes	2026/01/08 Thu 13:14:09
+add /opt/github/neoedmund/mindustry154b/dist/discord-46c0956944.jar	15,281 bytes	2026/01/08 Thu 13:14:07
+add /opt/github/neoedmund/mindustry154b/dist/filedialogs-46c0956944.jar	1,039 bytes	2026/01/08 Thu 13:13:40
+add /opt/github/neoedmund/mindustry154b/dist/flabel-46c0956944.jar	33,718 bytes	2026/01/08 Thu 13:13:41
+add /opt/github/neoedmund/mindustry154b/dist/freetype-46c0956944.jar	34,765 bytes	2026/01/08 Thu 13:13:41
+add /opt/github/neoedmund/mindustry154b/dist/fx-46c0956944.jar	62,586 bytes	2026/01/08 Thu 13:13:41
+add /opt/github/neoedmund/mindustry154b/dist/g3d-46c0956944.jar	45,505 bytes	2026/01/08 Thu 13:13:40
+add /opt/github/neoedmund/mindustry154b/dist/javapoet-1.12.1.jar	106,782 bytes	2026/01/08 Thu 13:13:34
+add /opt/github/neoedmund/mindustry154b/dist/lz4-java-1.8.0.jar	682,804 bytes	2026/01/08 Thu 13:13:40
+add /opt/github/neoedmund/mindustry154b/dist/md_core.jar	5,331,131 bytes	2026/01/09 Fri 00:05:58
+add /opt/github/neoedmund/mindustry154b/dist/md_core_asset.jar	64,185,646 bytes	2026/01/08 Thu 19:09:09
+add /opt/github/neoedmund/mindustry154b/dist/md_desktop.jar	8,803 bytes	2026/01/08 Thu 17:36:12
+add /opt/github/neoedmund/mindustry154b/dist/natives-desktop-46c0956944.jar	1,693,588 bytes	2026/01/08 Thu 13:14:09
+add /opt/github/neoedmund/mindustry154b/dist/natives-filedialogs-46c0956944.jar	117,137 bytes	2026/01/08 Thu 13:14:08
+add /opt/github/neoedmund/mindustry154b/dist/natives-freetype-desktop-46c0956944.jar	1,098,026 bytes	2026/01/08 Thu 13:14:08
+add /opt/github/neoedmund/mindustry154b/dist/packer-46c0956944.jar	52,630 bytes	2026/01/08 Thu 13:13:23
+add /opt/github/neoedmund/mindustry154b/dist/profiling-46c0956944.jar	24,019 bytes	2026/01/08 Thu 13:14:07
+add /opt/github/neoedmund/mindustry154b/dist/rhino-73a812444ac388ac2d94013b5cadc8f70b7ea027.jar	930,498 bytes	2026/01/08 Thu 13:13:42
+jar cnt=23 run mindustry.desktop.DesktopLauncher []
+

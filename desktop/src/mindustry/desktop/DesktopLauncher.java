@@ -1,34 +1,46 @@
 package mindustry.desktop;
 
-import arc.*;
-import arc.Files.*;
-import arc.backend.sdl.*;
-import arc.backend.sdl.jni.*;
-import arc.discord.*;
-import arc.discord.DiscordRPC.*;
-import arc.files.*;
-import arc.math.*;
-import arc.profiling.*;
-import arc.struct.*;
-import arc.util.*;
-import arc.util.Log.*;
-import arc.util.serialization.*;
+import static mindustry.Vars.net;
+import static mindustry.Vars.state;
+import static mindustry.Vars.steam;
+import static mindustry.Vars.testMobile;
+import static mindustry.Vars.ui;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+import arc.ApplicationListener;
+import arc.Core;
+import arc.Events;
+import arc.Files.FileType;
+import arc.backend.sdl.SdlApplication;
+import arc.backend.sdl.SdlConfig;
+import arc.backend.sdl.jni.SDL;
+//import arc.discord.DiscordRPC;
+//import arc.discord.DiscordRPC.NoDiscordClientException;
+//import arc.discord.DiscordRPC.RichPresence;
+import arc.files.Fi;
+import arc.profiling.GLProfiler;
+import arc.struct.Seq;
+import arc.util.Log;
+import arc.util.Log.LogLevel;
+import arc.util.OS;
+import arc.util.Strings;
+import arc.util.Structs;
+import arc.util.Threads;
 //import com.codedisaster.steamworks.*;
-import mindustry.*;
-import mindustry.core.*;
+import mindustry.ClientLauncher;
+import mindustry.Vars;
+import mindustry.core.Version;
 //import mindustry.desktop.steam.*;
-import mindustry.game.EventType.*;
-import mindustry.gen.*;
-import mindustry.graphics.*;
-import mindustry.mod.Mods.*;
-import mindustry.net.*;
-import mindustry.net.Net.*;
-import mindustry.service.*;
-import mindustry.type.*;
-
-import java.io.*;
-
-import static mindustry.Vars.*;
+import mindustry.game.EventType.ClientCreateEvent;
+import mindustry.gen.Groups;
+import mindustry.graphics.IntelGpuCheck;
+import mindustry.mod.Mods.LoadedMod;
+import mindustry.net.ArcNetProvider;
+import mindustry.net.CrashHandler;
+import mindustry.net.Net.NetProvider;
+import mindustry.type.Publishable;
 
 public class DesktopLauncher extends ClientLauncher{
     public final static long discordID = -1;//610508934456934412L;
@@ -115,19 +127,19 @@ public class DesktopLauncher extends ClientLauncher{
         boolean useSteam = Version.modifier.contains("steam");
 
         if(useDiscord){
-            Threads.daemon(() -> {
-                try{
-                    DiscordRPC.connect(discordID);
-                    Log.info("Initialized Discord rich presence.");
-                    Runtime.getRuntime().addShutdownHook(new Thread(DiscordRPC::close));
-                }catch(NoDiscordClientException none){
-                    //don't log if no client is found
-                    useDiscord = false;
-                }catch(Throwable t){
-                    useDiscord = false;
-                    Log.warn("Failed to initialize Discord RPC - you are likely using a JVM <16.");
-                }
-            });
+//            Threads.daemon(() -> {
+//                try{
+//                    DiscordRPC.connect(discordID);
+//                    Log.info("Initialized Discord rich presence.");
+//                    Runtime.getRuntime().addShutdownHook(new Thread(DiscordRPC::close));
+//                }catch(NoDiscordClientException none){
+//                    //don't log if no client is found
+//                    useDiscord = false;
+//                }catch(Throwable t){
+//                    useDiscord = false;
+//                    Log.warn("Failed to initialize Discord RPC - you are likely using a JVM <16.");
+//                }
+//            });
         }
 
 //        if(useSteam){
@@ -372,23 +384,23 @@ public class DesktopLauncher extends ClientLauncher{
         }
 
         if(useDiscord){
-            RichPresence presence = new RichPresence();
-
-            if(inGame){
-                presence.state = gameMode + gamePlayersSuffix;
-                presence.details = gameMapWithWave;
-                if(state.rules.waves){
-                    presence.largeImageText = "Wave " + state.wave;
-                }
-            }else{
-                presence.state = uiState;
-            }
-
-            presence.largeImageKey = "logo";
-
-            try{
-                DiscordRPC.send(presence);
-            }catch(Exception ignored){}
+//            RichPresence presence = new RichPresence();
+//
+//            if(inGame){
+//                presence.state = gameMode + gamePlayersSuffix;
+//                presence.details = gameMapWithWave;
+//                if(state.rules.waves){
+//                    presence.largeImageText = "Wave " + state.wave;
+//                }
+//            }else{
+//                presence.state = uiState;
+//            }
+//
+//            presence.largeImageKey = "logo";
+//
+//            try{
+//                DiscordRPC.send(presence);
+//            }catch(Exception ignored){}
         }
 
 //        if(steam){

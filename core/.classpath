@@ -7,7 +7,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="core-generated-kapt/main"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/arc-core/46c0956944/92e5ee5bcf2735553c8cde640d1743fbf724d6fd/arc-core-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/arc-core/46c0956944/92e5ee5bcf2735553c8cde640d1743fbf724d6fd/arc-core-46c0956944.jar" sourcepath="/ram/unpack/Arc-154/Arc-154/arc-core"/>
 	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/arcnet/46c0956944/e55517a3a5b7d284f86ac66c7a8fef46073b1e33/arcnet-46c0956944.jar"/>
 	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/backend-headless/46c0956944/fa55f7afdfc62b73a0ef7458839121fd3c9d96cb/backend-headless-46c0956944.jar"/>
 	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/backend-sdl/46c0956944/3e1399f07acf8f7a375403dad7e8203950a36133/backend-sdl-46c0956944.jar"/>
