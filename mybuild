@@ -1,0 +1,28 @@
+{ /* neoebuild script */
+	prjs : [
+		// [ mindustry154b . { dep : [ ] cp : [ ] } ]
+		[ md_desktop desktop { // main : mindustry.desktop.DesktopLauncher
+				dep : [ md_core ]
+				cp : [ /home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc ]
+			} ]
+		[ md_core core { srcDir : [ assets src core-generated-kapt/main ]
+				dep : [ ]
+				cp : [
+					/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc // for Arc binary got after gradlew on Arc
+					/home/neoe/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet
+					/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken/rhino
+					/home/neoe/.gradle/caches/modules-2/files-2.1/org.lz4
+					core/annotations-release.jar
+				] } ]
+
+		/*		[ md_annotations annotations { srcDir : [ src/main ] dep : [   ] 
+			cp : [
+					/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc  
+					/home/neoe/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet
+				] } ]
+				*/
+		// [ arc sub/arc-dummy { cp : [ /home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc /*for Arc binary, got after gradlew on Arc */ ] } ]
+
+	]
+}
+

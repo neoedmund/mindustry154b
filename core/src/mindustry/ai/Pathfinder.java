@@ -1,26 +1,55 @@
 package mindustry.ai;
 
-import arc.*;
-import arc.func.*;
-import arc.math.*;
-import arc.math.geom.*;
-import arc.struct.*;
+import static mindustry.Vars.avoidance;
+import static mindustry.Vars.controlPath;
+import static mindustry.Vars.indexer;
+import static mindustry.Vars.net;
+import static mindustry.Vars.pathfinder;
+import static mindustry.Vars.spawner;
+import static mindustry.Vars.state;
+import static mindustry.Vars.world;
+import static mindustry.world.meta.BlockFlag.battery;
+import static mindustry.world.meta.BlockFlag.drill;
+import static mindustry.world.meta.BlockFlag.factory;
+import static mindustry.world.meta.BlockFlag.generator;
+import static mindustry.world.meta.BlockFlag.launchPad;
+import static mindustry.world.meta.BlockFlag.reactor;
+import static mindustry.world.meta.BlockFlag.repair;
+import static mindustry.world.meta.BlockFlag.storage;
+
+import java.util.Arrays;
+
+import arc.Core;
+import arc.Events;
+import arc.func.Prov;
+import arc.math.Mathf;
+import arc.math.Rand;
+import arc.math.geom.Geometry;
+import arc.math.geom.Point2;
+import arc.math.geom.Position;
+import arc.struct.IntQueue;
+import arc.struct.IntSeq;
+import arc.struct.Seq;
+import arc.util.Log;
+import arc.util.Nullable;
 import arc.util.TaskQueue;
-import arc.util.*;
-import mindustry.annotations.Annotations.*;
-import mindustry.core.*;
-import mindustry.game.EventType.*;
-import mindustry.game.*;
-import mindustry.gen.*;
-import mindustry.world.*;
-import mindustry.world.blocks.environment.*;
-import mindustry.world.blocks.storage.*;
-import mindustry.world.meta.*;
-
-import java.util.*;
-
-import static mindustry.Vars.*;
-import static mindustry.world.meta.BlockFlag.*;
+import arc.util.Time;
+import mindustry.annotations.Annotations.Struct;
+import mindustry.annotations.Annotations.StructField;
+import mindustry.core.World;
+import mindustry.game.EventType.ResetEvent;
+import mindustry.game.EventType.TileChangeEvent;
+import mindustry.game.EventType.TilePreChangeEvent;
+import mindustry.game.EventType.Trigger;
+import mindustry.game.EventType.WorldLoadEvent;
+import mindustry.game.Team;
+import mindustry.gen.Building;
+import mindustry.gen.PathTile;
+import mindustry.world.Tile;
+import mindustry.world.blocks.environment.Floor;
+import mindustry.world.blocks.storage.CoreBlock;
+import mindustry.world.meta.BlockFlag;
+import mindustry.world.meta.BlockStatus;
 
 public class Pathfinder implements Runnable{
     private static final long maxUpdate = Time.millisToNanos(8);

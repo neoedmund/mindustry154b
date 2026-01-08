@@ -3,7 +3,7 @@ package mindustry.annotations.util;
 import arc.struct.*;
 import arc.util.*;
 import com.squareup.javapoet.*;
-import com.sun.tools.javac.code.Attribute.*;
+//import com.sun.tools.javac.code.Attribute.*;
 import mindustry.annotations.*;
 
 import javax.lang.model.element.*;
@@ -64,20 +64,20 @@ public class Selement<T extends Element>{
         return Seq.with(e.getAnnotationMirrors());
     }
 
-    public <A extends Annotation> A annotation(Class<A> annotation){
-        try{
-            Method m = com.sun.tools.javac.code.AnnoConstruct.class.getDeclaredMethod("getAttribute", Class.class);
-            m.setAccessible(true);
-            Compound compound = (Compound)m.invoke(e, annotation);
-            return compound == null ? null : AnnotationProxyMaker.generateAnnotation(compound, annotation);
-        }catch(Exception e){
-            throw new RuntimeException(e);
-        }
-    }
-
-    public <A extends Annotation> boolean has(Class<A> annotation){
-        return annotation(annotation) != null;
-    }
+//    public <A extends Annotation> A annotation(Class<A> annotation){
+//        try{
+//            Method m = com.sun.tools.javac.code.AnnoConstruct.class.getDeclaredMethod("getAttribute", Class.class);
+//            m.setAccessible(true);
+//            Compound compound = (Compound)m.invoke(e, annotation);
+//            return compound == null ? null : AnnotationProxyMaker.generateAnnotation(compound, annotation);
+//        }catch(Exception e){
+//            throw new RuntimeException(e);
+//        }
+//    }
+//
+//    public <A extends Annotation> boolean has(Class<A> annotation){
+//        return annotation(annotation) != null;
+//    }
 
     public Element up(){
         return e.getEnclosingElement();

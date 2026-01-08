@@ -1,0 +1,144 @@
+[/ram/unpack/Mindustry-154/Mindustry-154] ./gradlew desktop:run
+
+<begin stderr>
+<begin stdout>
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+No Android SDK found. Skipping Android module.
+
+> Configure project :
+Compiling with build: 'custom build'
+
+> Configure project :desktop
+Scheduling sprite packing.
+
+> Task :annotations:clearCache
+> Task :annotations:compileJava
+> Task :core:clearCache
+> Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :annotations:processResources
+> Task :annotations:classes
+> Task :annotations:jar
+> Task :core:kaptGenerateStubsKotlin SKIPPED
+> Task :core:preGen UP-TO-DATE
+> Task :core:processResources NO-SOURCE
+> Task :desktop:clearCache
+> Task :desktop:processResources NO-SOURCE
+> Task :tools:clearCache
+> Task :tools:processResources NO-SOURCE
+
+> Task :core:kaptKotlin
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+warning: Supported source version 'RELEASE_8' from annotation processor 'org.jetbrains.kotlin.kapt3.base.ProcessorWrapper' less than -source '17'
+
+> Task :core:compileKotlin SKIPPED
+
+> Task :core:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :core:classes
+> Task :core:jar
+> Task :desktop:compileJava
+> Task :desktop:classes
+
+> Task :tools:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :tools:classes
+
+> Task :tools:pack
+[1m[93m[Generator][96m Time to generate [95mautotiles[96m: [92m26.918753[96mms[0m
+[1m[93m[Generator][96m Time to generate [95msplashes[96m: [92m9.566487[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mbubbles[96m: [92m15.345053[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mgas-frames[96m: [92m90.96469[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mcliffs[96m: [92m546.7888[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mcracks[96m: [92m338.0096[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mblock-icons[96m: [92m567.7245[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mshallows[96m: [92m1.921812[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mitem-icons[96m: [92m7.250226[96mms[0m
+[1m[93m[Generator][96m Time to generate [95msector-icons[96m: [92m32.21523[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mteam-icons[96m: [92m2.844352[96mms[0m
+[1m[93m[Generator][96m Time to generate [95munit-icons[96m: [92m999.8069[96mms[0m
+[1m[93m[Generator][96m Time to generate [95more-icons[96m: [92m12.703201[96mms[0m
+[1m[93m[Generator][96m Time to generate [95medges[96m: [92m57.782097[96mms[0m
+[1m[93m[Generator][96m Time to generate [95mscorches[96m: [92m550.20844[96mms[0m
+[1m[93m[Generator][96m Total time to generate: [92m3406.6682[96mms[0m
+Time taken for AA: 1.174 seconds
+
+
+Packing normal 4096 sprites...
+
+
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out
+| Packing................
+| Writing 4096x4096: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/sprites.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/blocks/environment
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/sprites2.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/rubble
+| Packing................
+| Writing 4096x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/sprites3.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/ui
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/sprites4.png
+
+
+Packing fallback 2048 sprites...
+
+
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out
+| Packing................
+| Packing................
+| Packing................
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites.png
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites2.png
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites3.png
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites4.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/blocks/environment
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites5.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/rubble
+| Packing................
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites6.png
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites7.png
+/ram/unpack/Mindustry-154/Mindustry-154/core/assets-raw/sprites_out/ui
+| Packing................
+| Writing 2048x2048: /ram/unpack/Mindustry-154/Mindustry-154/core/assets/sprites/fallback/sprites8.png
+
+> Task :desktop:run
+[94m[1m[I][0m [Core] Initialized SDL v2.0.10
+[94m[1m[I][0m [Audio] Initialized SoLoud 20251201 using MiniAudio at 44100hz / 900 samples / 2 channels
+[94m[1m[I][0m [GL] Version: OpenGL 4.6.0 / AMD / AMD Radeon RX 6800 (radeonsi, navi21, LLVM 19.1.7, DRM 3.64, 6.18.2-gm) / 4.6 (Core Profile) Mesa 25.3.3
+[94m[1m[I][0m [GL] Max texture size: 16384
+[94m[1m[I][0m [GL] Using OpenGL 3 API.
+[94m[1m[I][0m [GL] Total available VRAM: 80742mb
+[94m[1m[I][0m [JAVA] Version: 17.0.17
+[94m[1m[I][0m [RAM] Available: 29.9 GB
+[94m[1m[I][0m [Mindustry] Version: custom
+[94m[1m[I][0m Total time to load: 2075ms
+[94m[1m[I][0m Fetched 139 community servers.
+[94m[1m[I][0m Setting locale: zh_CN
+
+[Incubating] Problems report is available at: file:///ram/unpack/Mindustry-154/Mindustry-154/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 32s
+14 actionable tasks: 14 executed
+<end stderr>
+<end stdout>
+
+Exit(0) in about 93,198 ms for
+[/ram/unpack/Mindustry-154/Mindustry-154] ./gradlew desktop:run
+

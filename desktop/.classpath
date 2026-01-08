@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/md_core"/>
+	<classpathentry kind="output" path="bin"/>
+	
+		<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/arc-core/46c0956944/92e5ee5bcf2735553c8cde640d1743fbf724d6fd/arc-core-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/arcnet/46c0956944/e55517a3a5b7d284f86ac66c7a8fef46073b1e33/arcnet-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/backend-headless/46c0956944/fa55f7afdfc62b73a0ef7458839121fd3c9d96cb/backend-headless-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/backend-sdl/46c0956944/3e1399f07acf8f7a375403dad7e8203950a36133/backend-sdl-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/discord/46c0956944/9542fad7f57761632e1a0cc8bce0cd00575220db/discord-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/filedialogs/46c0956944/b8c8813aa9a6e6e9d0366452fa3a893f9ce3649e/filedialogs-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/flabel/46c0956944/77292801c17e65ccbad5eb701943719c7bcb1941/flabel-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/freetype/46c0956944/2c024c3de4e74b22b1023ca75afb20f15a8d0c81/freetype-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/fx/46c0956944/f2fc8d8796665c79e30e24ae6ae4e15836123fc4/fx-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/g3d/46c0956944/c706073a3e896806752e6c509a3cef69d667413c/g3d-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/natives-desktop/46c0956944/283f352b90cdae672b641f6c18d300238ee99090/natives-desktop-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/natives-filedialogs/46c0956944/ed292b8b5130ea0c4de9e1c62ae910dbeea84979/natives-filedialogs-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/natives-freetype-desktop/46c0956944/887b539c8bf369ddba1e539f6afa12d7fa05187a/natives-freetype-desktop-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/packer/46c0956944/e6fc9a109889d3c8fb79ef9079467d9d29848b92/packer-46c0956944.jar"/>
+	<classpathentry kind="lib" path="/home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc/profiling/46c0956944/3dc0807312a7fad16c8c0f1f6cf19b5270065c30/profiling-46c0956944.jar"/>
+	
+</classpath>
