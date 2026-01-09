@@ -38,7 +38,7 @@
 				] } ]
 				*/
 		// [ arc sub/arc-dummy { cp : [ /home/neoe/.gradle/caches/modules-2/files-2.1/com.github.Anuken.Arc /*for Arc binary, got after gradlew on Arc */ ] } ]
-		[ arc_core sub/Arc-154/arc-core { srcDir : [ src unsafe ] } ]
+		[ arc_core sub/Arc-154/arc-core { srcDir : [ src ] } ]
 
 	]
 }

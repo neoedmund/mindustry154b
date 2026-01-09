@@ -29,7 +29,7 @@ import java.nio.*;
  * @author badlogicgames@gmail.com
  */
 public class Pixmap implements Disposable{
-    private static final boolean supportsBufferCopy = OS.javaVersionNumber >= 16 || (OS.isAndroid && Core.app != null && Core.app.getVersion() >= 35);
+    private static final boolean supportsBufferCopy = true; // OS.javaVersionNumber >= 16 || (OS.isAndroid && Core.app != null && Core.app.getVersion() >= 35);
 
     /** Size of the pixmap. Do not modify unless you know what you are doing. */
     public int width, height;
@@ -817,7 +817,7 @@ public class Pixmap implements Disposable{
     static void copyMem(ByteBuffer src, int srcOffset, ByteBuffer dst, int dstOffset, int len){
         //Java 16 supports direct byte buffer transfer without modifying state. Older versions (+Android/iOS) don't, and likely never will
         if(supportsBufferCopy){
-            Java16Buffers.copy(src, srcOffset, dst, dstOffset, len);
+        	UnsafeBuffers.copy(src, srcOffset, dst, dstOffset, len);
         }else{
             if(!UnsafeBuffers.failed){
                 UnsafeBuffers.copy(src, srcOffset, dst, dstOffset, len);
